@@ -1,0 +1,66 @@
+@model IEnumerable<MyCodeFiratAPNET5.Models.ClassRoom>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BuildingId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClassFloor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClassRoomId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClassRoomName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumOfPeoples)
+        </th>
+        <th></th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuildingId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClassFloor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClassRoomId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClassRoomName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumOfPeoples)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+</table>
+</body>
+</html>
+

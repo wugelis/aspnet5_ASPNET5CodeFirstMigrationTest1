@@ -1,0 +1,59 @@
+@model MyCodeFiratAPNET5.Models.ClassRoom
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+
+<div>
+    <h4>ClassRoom</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildingId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuildingId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassFloor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClassFloor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassRoomId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClassRoomId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassRoomName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClassRoomName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumOfPeoples)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumOfPeoples)
+        </dd>
+    </dl>
+</div>
+<p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index")
+</p>
+</body>
+</html>
+

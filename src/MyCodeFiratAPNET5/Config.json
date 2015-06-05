@@ -1,0 +1,13 @@
+﻿{
+    "Data": {
+        "DefaultConnection": {
+            "ConnectionString": "Server=(localdb)\\MSSQLLocalDB;Database=aspnet5-MyCodeFiratAPNET5;Trusted_Connection=True;;MultipleActiveResultSets=true"
+        }
+    },
+    "EntityFramework": {
+        "ClassRoomContext": {
+            "ConnectionStringKey": "Data:DefaultConnection:ConnectionString"
+        }
+    }
+
+}
